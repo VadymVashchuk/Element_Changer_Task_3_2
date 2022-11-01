@@ -1,8 +1,14 @@
 let mainEl = document.getElementById('mainEl');
+let elementStyle = getComputedStyle(mainEl);
 
 const widthChooser = document.getElementById('widthChooser');
 const heightChooser = document.getElementById('heightChooser');
 const borderRadiusChooser = document.getElementById('borderRadiusChooser');
+
+const arrowUp = document.getElementById('arrowUp');
+const arrowDown = document.getElementById('arrowDown');
+const arrowRight = document.getElementById('arrowRight');
+const arrowLeft = document.getElementById('arrowLeft');
 
 const newProperties = {
   width: document.getElementById('widthEl'),
@@ -39,4 +45,104 @@ function clearAllChanges() {
   mainEl.style.borderColor = "rgb(66, 22, 122)";
   mainEl.style.borderRadius = "";
   mainEl.style.color = "rgb(34, 34, 34)";
+  mainEl.style.top = "250px";
+  mainEl.style.left = "800px";
 }
+
+
+
+//ФУНКЦІЇ РУХУ - ПО 2 ФУНКЦІЇ НА КОЖНУ З 4 СТОРІН
+
+//Вверх
+
+function moveElUp() {
+  let elementPositionTop = parseInt(elementStyle.top);
+  mainEl.style.top = --elementPositionTop + 'px';
+}
+
+function runElUp() {
+  let elementPositionTop = parseInt(elementStyle.top);
+  x = setInterval(function () {
+    mainEl.style.top = --elementPositionTop + 'px';
+  }, 100);
+  document.addEventListener('mouseup', function () {
+    clearInterval(window.x);
+  })
+}
+
+//Вправо
+
+function moveElRight() {
+  let elementPositionLeft = parseInt(elementStyle.left);
+  mainEl.style.left = ++elementPositionLeft + 'px';
+}
+
+function runElRight() {
+  let elementPositionLeft = parseInt(elementStyle.left);
+  x = setInterval(function () {
+    mainEl.style.left = ++elementPositionLeft + 'px';
+  }, 100);
+  document.addEventListener('mouseup', function () {
+    clearInterval(window.x);
+  })
+}
+
+//Вниз
+
+function moveElDown() {
+  let elementPositionTop = parseInt(elementStyle.top);
+  mainEl.style.top = ++elementPositionTop + 'px';
+}
+
+function runElDown() {
+  let elementPositionTop = parseInt(elementStyle.top);
+  x = setInterval(function () {
+    mainEl.style.top = ++elementPositionTop + 'px';
+  }, 100);
+  document.addEventListener('mouseup', function () {
+    clearInterval(window.x);
+  })
+}
+
+//Вліво
+
+function moveElLeft() {
+  let elementPositionLeft = parseInt(elementStyle.left);
+  mainEl.style.left = --elementPositionLeft + 'px';
+}
+
+function runElLeft() {
+  let elementPositionLeft = parseInt(elementStyle.left);
+  x = setInterval(function () {
+    mainEl.style.left = --elementPositionLeft + 'px';
+  }, 100);
+  document.addEventListener('mouseup', function () {
+    clearInterval(window.x);
+  })
+}
+
+//СТРЕЛОЧКИ
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowUp') {
+    moveElUp();
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowDown') {
+    moveElDown();
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowRight') {
+    moveElRight();
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowLeft') {
+    moveElLeft();
+  }
+});
