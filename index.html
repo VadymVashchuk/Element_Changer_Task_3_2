@@ -51,15 +51,20 @@
         <div class="input-title">Font color:</div>
         <input type="color" id="fontColorEl" class="input-field" list="colors" value="#222222">
       </div>
+      <div class="arrows-wrapper">
+        <h2>MOVE ELEMENT WITH ARROWS</h2>
+        <button id="arrowUp" class="arrow" onclick="moveElUp()" onmousedown="runElUp()">&gt;</button>
+        <button id="arrowRight" class="arrow" onclick="moveElRight()" onmousedown="runElRight()">&gt;</button>
+        <button id="arrowDown" class="arrow" onclick="moveElDown()" onmousedown="runElDown()">&gt;</button>
+        <button id="arrowLeft" class="arrow" onclick="moveElLeft()" onmousedown="runElLeft()">&gt;</button>
+      </div>
       <div class="buttons-wrapper">
         <button id="changeButton" class="accept-button" onclick="acceptChanges()">CHANGE</button>
         <button id="clearButton" class="accept-button" onclick="clearAllChanges()">CLEAR</button>
       </div>
     </div>
-    <div class="element-wrapper">
-      <div id="mainEl">
-        <div class="el-test">Change me</div>
-      </div>
+    <div id="mainEl">
+      <div class="el-test">Change me</div>
     </div>
   </div>
 </body>
