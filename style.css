@@ -158,14 +158,14 @@ option {
   top: 42px;
   left: 165px;
   transform: rotate(-90deg);
-  padding: 2px 0px 0px 2px;
+  padding: 0px 0px 0px 2px;
 }
 
 #arrowRight {
   position: absolute;
   top: 66px;
   left: 205px;
-  padding: 2px 0px 0px 4px;
+  padding: 0px 0px 0px 2px;
 }
 
 #arrowDown {
@@ -173,7 +173,7 @@ option {
   top: 90px;
   left: 165px;
   transform: rotate(90deg);
-  padding: 2px 0px 0px 4px;
+  padding: 0px 0px 0px 2px;
 }
 
 #arrowLeft {
@@ -181,7 +181,7 @@ option {
   top: 66px;
   left: 125px;
   transform: rotate(180deg);
-  padding: 1px 0px 0px 4px;
+  padding: 0px 0px 0px 2px;
 }
 
 .arrow:hover {
