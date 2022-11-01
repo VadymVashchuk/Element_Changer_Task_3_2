@@ -151,6 +151,7 @@ option {
   border: 0;
   color: rgb(112, 112, 112);
   font-weight: 700;
+  padding: 0px 0px 0px 2px;
 }
 
 #arrowUp {
@@ -158,14 +159,12 @@ option {
   top: 42px;
   left: 165px;
   transform: rotate(-90deg);
-  padding: 2px 0px 0px 2px;
 }
 
 #arrowRight {
   position: absolute;
   top: 66px;
   left: 205px;
-  padding: 2px 0px 0px 4px;
 }
 
 #arrowDown {
@@ -173,7 +172,6 @@ option {
   top: 90px;
   left: 165px;
   transform: rotate(90deg);
-  padding: 2px 0px 0px 4px;
 }
 
 #arrowLeft {
@@ -181,7 +179,6 @@ option {
   top: 66px;
   left: 125px;
   transform: rotate(180deg);
-  padding: 1px 0px 0px 4px;
 }
 
 .arrow:hover {
