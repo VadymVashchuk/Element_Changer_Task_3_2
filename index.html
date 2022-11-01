@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Element changer</title>
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <div class="form-wrapper">
+      <div class="main-title">
+        <h1>ELEMENT STYLE CHANGER</h1>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-title">Width:</div>
+        <input type="text" id="widthEl" class="input-field">
+      </div>
+      <div class="input-wrapper">
+        <div class="input-title">Height:</div>
+        <input type="text" id="heightEl" class="input-field">
+      </div>
+      <div class="input-wrapper">
+        <div class="input-title">Background color:</div>
+        <input type="text" id="bgColorEl" class="input-field">
+      </div>
+      <div class="input-wrapper">
+        <div class="input-title">Border color:</div>
+        <input type="text" id="borderColorEl" class="input-field">
+      </div>
+      <div class="input-wrapper">
+        <div class="input-title">Border radius:</div>
+        <input type="text" id="borderRadiusEl" class="input-field">
+      </div>
+      <div class="input-wrapper">
+        <div class="input-title">Font color:</div>
+        <input type="text" id="fontColorEl" class="input-field">
+      </div>
+      <div class="buttons-wrapper">
+        <button id="changeButton" class="accept-button" onclick="acceptChanges()">CHANGE</button>
+        <button id="clearButton" class="accept-button" onclick="clearAllChanges()">CLEAR</button>
+      </div>
+    </div>
+    <div class="element-wrapper">
+      <div id="mainEl">
+        <div class="el-test">Change me</div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
