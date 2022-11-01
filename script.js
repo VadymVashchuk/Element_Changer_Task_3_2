@@ -1,5 +1,9 @@
 let mainEl = document.getElementById('mainEl');
 
+const widthChooser = document.getElementById('widthChooser');
+const heightChooser = document.getElementById('heightChooser');
+const borderRadiusChooser = document.getElementById('borderRadiusChooser');
+
 const newProperties = {
   width: document.getElementById('widthEl'),
   height: document.getElementById('heightEl'),
@@ -10,21 +14,24 @@ const newProperties = {
 }
 
 function acceptChanges() {
-  mainEl.style.width = newProperties.width.value;
-  mainEl.style.height = newProperties.height.value;
+  mainEl.style.width = newProperties.width.value + widthChooser.value;
+  mainEl.style.height = newProperties.height.value + heightChooser.value;
   mainEl.style.backgroundColor = newProperties.bgColor.value;
   mainEl.style.borderColor = newProperties.borderColor.value;
-  mainEl.style.borderRadius = newProperties.borderRadius.value;
+  mainEl.style.borderRadius = newProperties.borderRadius.value + borderRadiusChooser.value;
   mainEl.style.color = newProperties.fontColor.value;
 }
 
 function clearAllChanges() {
+  widthChooser.value = "px";
+  heightChooser.value = "px";
+  borderRadiusChooser.value = "%";
   newProperties.width.value = "";
   newProperties.height.value = "";
-  newProperties.bgColor.value = "";
-  newProperties.borderColor.value = "";
+  newProperties.bgColor.value = "#9d92ac";
+  newProperties.borderColor.value = "#42167a";
   newProperties.borderRadius.value = "";
-  newProperties.fontColor.value = "";
+  newProperties.fontColor.value = "#222222";
 
   mainEl.style.width = "300px";
   mainEl.style.height = "300px";
